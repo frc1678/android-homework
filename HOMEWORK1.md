@@ -20,7 +20,15 @@ Now, you're faced with this scary interface: ![Default Image](Images/Default.png
 Do not fret, just navigate to the tab called activity_main.xml, and click the text tab.
 You should be around here: ![XML Image](Images/XML.png)
 
-Now, 
+Now, drumroll please, here is the game!
+You must make an interface that conforms to the following specifications:
+
+1. It must contain an edit text
+2. It must also contain some buttons
+3. Whatever else is needed for the whole app to work
+4. ????
+5. Profit
+6. Make all of it neon green (Hint: use #912270, you'll understand once you get there)
 
 
-Now, it may be helpful to tell you upfront that you will be building a live chat app throughout this process, and that each part builds upon the next. So, it is advisable to do a good job on each part, or it may come back and bite you. Good Luck!
+Thats it from me! Well, one more thing. It may be helpful to tell you upfront that you will be building a live chat app throughout this process, and that each part builds upon the next. So, it is advisable to do a good job on each part, or it may come back and bite you. Good Luck!
