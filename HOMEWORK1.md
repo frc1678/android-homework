@@ -7,3 +7,6 @@ Do not see their use as a weakness. In fact, navigating documentation is another
 
 [Android Developer Website](http://developer.android.com/training/index.html)
 
+
+
+Alright, so, on to the good stuff: the project. 
