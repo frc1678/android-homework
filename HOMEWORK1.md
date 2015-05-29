@@ -28,7 +28,7 @@ You must make an interface that conforms to the following specifications:
 3. Whatever else is needed for the whole app to work
 4. ????
 5. Profit
-6. Make all of it neon green (Hint: use #912270, you'll understand once you get there)
+6. Make all of it neon green (Hint: use #5BE300, you'll understand once you get there)
 
 
 Thats it from me! Well, one more thing. It may be helpful to tell you upfront that you will be building a live chat app throughout this process, and that each part builds upon the next. So, it is advisable to do a good job on each part, or it may come back and bite you. Good Luck!
