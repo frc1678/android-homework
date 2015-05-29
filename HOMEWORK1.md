@@ -7,6 +7,6 @@ Do not see their use as a weakness. In fact, navigating documentation is another
 
 [Android Developer Website](http://developer.android.com/training/index.html)
 
-
-
 Alright, so, on to the good stuff: the project. 
+To begin, create a new android project, and name it whatever your heart desires. However, you will soon encounter a screen that looks something like this:
+![SDK image](SDK.png)
