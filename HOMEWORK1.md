@@ -34,5 +34,14 @@ You must make an interface that conforms to the following specifications:
 6. Profit
 7. For bonus points, Make all of it neon green (Hint: use #5BE300, you'll understand once you get there)
 
+When you are done, you should have something that resembles this screen:
 
-Thats it from me! Well, one more thing. It may be helpful to tell you upfront that each homework assignment builds upon the next. So, it is advisable to do a good job on each part, or it may come back and bite you. Good Luck!
+![Finished Homework 1](Images/chat1.png)
+
+That's it from me! Well, one more thing. It may be helpful to tell you upfront that each homework assignment builds upon the next. So, it is advisable to do a good job on each part, or it may come back and bite you. Good Luck!
+
+
+_TODO_:
+* Resize final image
+* Add help on XML
+* Explain how to run app when finished writing it
