@@ -91,6 +91,3 @@ And for the finishing touch, add a [Button](https://developer.android.com/refere
 At this point, you should have the basic user interface for the chat app.  Click the green arrow button (Or press Shift+F10) to run the app!  If there are any errors, Android Studio should alert you to this fact by opening a window that will have a small, red exclamation mark on it, along with an error message.  If you run into an error message, you can choose to [try to find out how to fix it yourself](https://google.com), or you can find a more senior app programmer to help you fix it.
 
 Assuming everything works as expected, it's time to move on to [Homework #2](HOMEWORK2.md)!
-
-_TODO_:
-* Resize final image
