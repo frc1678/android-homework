@@ -8,4 +8,8 @@ Welcome back! I must say, you are tenacious. HOWEVER! This project will prove mo
 
 So, since you're here, I assume you've completed homework 2, and you should have an application that looks someting like this:
 
+![MainActivity](Images/chat1.png)
+![ChatActivity](Images/chat2.png)
+
+
 
