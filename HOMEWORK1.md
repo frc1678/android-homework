@@ -7,6 +7,8 @@ Do not see their use as a weakness. In fact, navigating documentation is another
 
 [Android Developer Website](http://developer.android.com/training/index.html)
 
+For any issue not covered on that website, try [this](www.google.com).
+
 Alright, so, on to the good stuff: the project. 
 
 You'll be making a live chat app.  In this homework assignment, you'll create the layout for the first screen that the user will see.
