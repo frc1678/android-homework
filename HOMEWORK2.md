@@ -43,3 +43,4 @@ You might be wondering, "How do I check if the ListView overlaps with the EditTe
 
 The large box in the center is the ListView.  If you don't see the small, blue, L shaped line just above the ListView, it's probably overlapping the EditText, and you should fix that.
 
+Well, that is all I have for you today. Best of luck on homework 2 and I will see you in the following assignment!
