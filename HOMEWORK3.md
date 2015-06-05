@@ -11,5 +11,4 @@ So, since you're here, I assume you've completed homework 2, and you should have
 ![MainActivity](Images/chat1.png)
 ![ChatActivity](Images/chat2.png)
 
-
-
+So, the application is beginning to take shape! But if this chat app is going to work, it will need some way to display the chat messages! But how will that be accomplished?, you may ask. Simple, with ListViews and ListAdapters. Now, you may remember that your app already has an embedded ListView. 
