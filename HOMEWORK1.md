@@ -1,7 +1,7 @@
 #Homework 1
 
 Welcome. My purpose is to show you how layouts and UI work in android, as well as teaching you the basics of github.
-Now to begin, clone this repository, where you will be demonstrating your prowess of android UIs and Layouts.
+Now, think of this project as an opportunity to demonstrate your prowess of android UIs and Layouts.
 However, you may need some help along the way. To make your life easier, most, if not all, of the resources you require will be listed here.  There will be many links throughout the homework.  They aren't required reading, but they might be helpful if you get stuck!
 Do not see their use as a weakness. In fact, navigating documentation is another key skill that even MLG Programmers make use of ~~from time to time~~ all day every day.
 
