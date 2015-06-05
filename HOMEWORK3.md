@@ -6,4 +6,6 @@ Welcome back! I must say, you are tenacious. HOWEVER! This project will prove mo
 
 [ListAdapters](http://developer.android.com/reference/android/widget/ListAdapter.html)
 
+So, since you're here, I assume you've completed homework 2, and you should have an application that looks someting like this:
+
 
