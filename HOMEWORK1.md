@@ -16,7 +16,7 @@ You'll be making a live chat app.  In this homework assignment, you'll create th
 To begin, create a new android project, and name it whatever your heart desires. However, you will soon encounter a screen that looks something like this:
 ![SDK image](Images/SDK.png)
 
-Worry not! For I am here to tell you that setting it to API 19: Android 4.4(KitKat) will suffice for now. May I advise you, however, that whenever there are unfamiliar terms such as SDK or API, it is helpful to look up and at least have a basic understanding of what they mean. 
+Worry not! For I am here to tell you that setting it to API 19: Android 4.4 (KitKat) (However, note that if you are using a pre-KitKat device, it will fail and possibly explode) will suffice for now. May I advise you, however, that whenever there are unfamiliar terms such as SDK or API, it is helpful to look up and at least have a basic understanding of what they mean. 
 Anyway, continue hitting next and then finish. 
 
 And Voila! You have created your first android application!
