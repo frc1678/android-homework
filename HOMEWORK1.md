@@ -64,7 +64,7 @@ Let's go through this line-by-line and see what it's doing.
 
 `android:text="Chatroom Name"` sets the text that you want the TextView to display.
 
-`android:id="@+id/chatroomNameTextView"` sets the [ID](https://developer.android.com/guide/topics/ui/declaring-layout.html#id) of this element.  You don't have to worry about this now, but it will become important in the next homework assignments, so make it something descriptive.  For example, `chatroomNameTextView` is fairly short and describes what the element is, and is thus a good ID.  Some examples of bad IDs are `asdf` and `thingy`.  You can't use the same ID for two different elements.
+`android:id="@+id/chatroomNameTextView"` sets the [ID](https://developer.android.com/guide/topics/ui/declaring-layout.html#id) of this element.  For now, you can think of this as just like a person's ID, something to identify them, but it will become important in the next homework assignments, so make it something descriptive.  For example, `chatroomNameTextView` is fairly short and describes what the element is, and is thus a good ID.  Some examples of bad IDs are `asdf` and `thingy` (you wouldn't want people calling you those things, or would you [yes, that was a threat {and yes, I have three levels of enclosing characters}]).  You can't use the same ID for two different elements.
 
 `android:layout_alignParentTop="true"` says that the TextView should appear at the top of the thing that it's inside.  You can also do things like `android:layout_alignParentBottom="true"`, if you want the element to show up at the bottom of the thing that it's inside.
 
