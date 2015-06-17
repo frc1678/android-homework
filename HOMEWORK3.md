@@ -79,8 +79,22 @@ So, to actually put cells in your little ListView, you're going to have to use L
         });
        
 
-Yep, you heard that right. You're going to have to implement that whole mess of code. Hey, its not that bad, really the biggest method that you're going to have to add code is the <code> Public View getView </code> method
-However, one more thing before I go: As of right now, there isn't anything to actually put in the cells(we don't have a data source yet), so do not worry about customizing the cells too much(just be sure you know how when the time comes. And trust me, it will come). 
+Yep, you heard that right. You're going to have to implement that whole mess of code. Hey, its not that bad, really the biggest method that you're going to have to add code to is the <code>Public View getView</code> method. Thats the one that actually makes the cells for you, so make sure you do a good job. I should also probably mention that all of these methods are actually automatically called for you when our ListView get generated, so you don't have to worry about calling them manually anywhere(pretty slick, eh?)
+
+Oh, I almost forgot, you're going to have to make sure this all works from data from an array. SO! First, we have to make an array of some sort. How about an array of your favorite foods?
+So for me, it would look something like this:
+<pre><code>
+ArrayList<String> foodList = new ArrayList<String>();
+        foodList.add("Chips");
+        foodList.add("Electricity");
+        foodList.add("Lost Souls");
+        foodList.add("Wires");
+        foodList.add("Disks");
+        </code></pre>
+
+Now, make sure you use your array to determine all of the methods that you're implementing. What do I mean by that? I'll give you an example: if my <code>getCount</code> method just returned 5 instead of <code>foodList.length</code>, then whenever my food preferences changed my application would not show all of the results properly. And we don't want that. This is known as hardcoding, and its risky business, so use with extreme caution. Oh and don't worry, you'll be changing up the data source very soon, this is just a placeholder to get you warmed up.
 
 
+
+Well, thats it for me!
 Best of luck, and I'll see you again in homework 4!
