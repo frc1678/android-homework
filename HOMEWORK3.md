@@ -15,8 +15,9 @@ So, the application is beginning to take shape! But if this chat app is going to
 
 So, to actually put cells in your little ListView, you're going to have to use ListAdapters.
 
-
-  <pre><code> setListAdapter(new ListAdapter() { </code></pre>
+<pre><code>
+ setListAdapter(new ListAdapter() { 
+  
             @Override
             public boolean areAllItemsEnabled() {
                 return false;
@@ -76,8 +77,9 @@ So, to actually put cells in your little ListView, you're going to have to use L
             public boolean isEmpty() {
                 return false;
             }
-        });
+        }); 
        
+</code></pre>
 
 Yep, you heard that right. You're going to have to implement that whole mess of code. Hey, its not that bad, really the biggest method that you're going to have to add code to is the <code>Public View getView</code> method. Thats the one that actually makes the cells for you, so make sure you do a good job. I should also probably mention that all of these methods are actually automatically called for you when our ListView get generated, so you don't have to worry about calling them manually anywhere(pretty slick, eh?)
 
