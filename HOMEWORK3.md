@@ -104,7 +104,7 @@ ArrayList<String> foodList = new ArrayList<String>();
         foodList.add("Disks");
         </code></pre>
 
-Now, make sure you use your array to determine all of the methods that you're implementing. What do I mean by that? I'll give you an example: if my <code>getCount</code> method just returned 5 instead of <code>foodList.length</code>, then whenever my food preferences changed my application would not show all of the results properly. And we don't want that. This is known as hardcoding, and its risky business, so use with extreme caution. Oh and don't worry, you'll be changing up the data source very soon, this is just a placeholder to get you warmed up.
+Now, make sure you use your array to determine all of the methods that you're implementing. What do I mean by that? I'll give you an example: if my <code>getCount</code> method just returned 5 instead of <code>foodList.size()</code>, then whenever my food preferences changed my application would not show all of the results properly. And we don't want that. This is known as hardcoding, and its risky business, so use with extreme caution. Oh and don't worry, you'll be changing up the data source very soon, this is just a placeholder to get you warmed up.
 
 
 
