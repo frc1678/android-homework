@@ -5,6 +5,10 @@ Welcome back! You are doing very well indeed, and I am pleased to announce that 
 First things first, we will be using a service called firebase. You can get to their website simply by clicking the following link. I also advise you follow the instructions that they provide so that you can integrate firebase into your application:
 https://www.firebase.com/docs/android/guide/setup.html
 
+It may be advisable to look into JSON, or javascript object notation ( which is just a way to conveniently transfer data over the interwebz ), since this is basically the structure that firebase uses to store data (its also explained on the website). 
+
+
+
 done.
 
 good job, you have made chat app.
