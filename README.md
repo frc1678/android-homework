@@ -1,1 +1,1 @@
-This is the repo with all of the android homework descriptions
+FRC Team 1678's assignments for teaching Android programming. These are constantly under development.
