@@ -26,7 +26,7 @@ Firebase.setAndroidContext(this);
 Firebase roomsRef = new Firebase("insert link here");
 ```
 
-
+Hey! You're connected! 
 
 
 done.
