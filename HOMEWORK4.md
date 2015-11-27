@@ -4,7 +4,7 @@ THIS IS NOT FINISHED:
 
 Welcome back! You are doing very well indeed, and I am pleased to announce that you have made it to the final stage of the process. But that does not mean that you are almost finished. No, this part may prove to be the most difficult. You must navigate APIs, networking, and a myriad of other ideas and concepts to accomplish this chat application. 
 
-First things first, we will be using a service called Firebase. You can get to their website simply by clicking the following link. I also advise you follow the instructions that they provide so that you can integrate Firebase into your application:
+First things first, we will be using a service called Firebase. You can get to their website simply by clicking the following link. I also advise you follow the instructions that they provide so that you can integrate Firebase into your application. Your life will be a lot easier if you read through that whole guide before you start on this assignment. You don't need to understand it all immediately, but at least get a sense of it. You'll be referencing it a lot throughout this assignment:
 https://www.firebase.com/docs/android/guide/setup.html
 
 It may be advisable to look into JSON, or Javascript Object Notation ( A way to conventiently transfer data ), since this is basically the structure that Firebase uses to store data.
@@ -41,21 +41,62 @@ Let's think about what we decided we wanted our `MainActivity.java` to do. What 
 1. Stay up to date with all the latest chatroom trends.
 2. Create chatrooms if necessary
 
-We've done No. 1, so let's head over to No. 2.  Now, when do we want to create the chatroom? If you said when the user presses the Chat button, then you'd be right! Now, the nice thing is that we already have a method that is called when you click that button, so we can just modify that method. Now, all we need to check for is if the chatroom exists. If it does, then all good. If not, then we need to make that? Got that handled? Good. You should use the system you established in Step 1 to help out with this.
+We've done No. 1, so let's head over to No. 2.  Now, when do we want to create the chatroom? If you said when the user presses the Chat button, then you'd be right! Now, the nice thing is that we already have a method that is called when you click that button, so we can just modify that method. Now, all we need to check for is if the chatroom exists. If it does, then all good. If not, then we need to make that? Got that handled? Good. You should use the system you established in Step 1 to help out with this. For now, our chatrooms will just be strings containing the names of the chatrooms. For simplicity, ya know.
 
 Nice job (probably, I can't see your code)! So remember how I said there are only two things that we need to do in the `MainActivity.java`? Well, there's one thing I forgot to tell you: there's one more! I know, you're so excited, right? Anyway, we want our app to look nice and be user friendly, so lets start refining our UI. One problem with our current system is that the user currently has to type in the full name of their chatroom. Well, that would not be very much fun if the chatroom name was "Donaudampfschiffahrtsgesellschaftskapitän" (The German word for "Danube steamship company captain." I'm sure that there are many German Danube steamship company captains using our app.). Maybe, instead of forcing them to type it in every time, we can just make a dropdown menu. Okay, so time to start with fragments and listviews and filtering and search algorithms and computational efficieny and cats and magic Assembly code and, while we're at it, why not write it in Haskell, right? 
 
-Well, fortunately for all of you, Google already did most of that work for you (minus the cats and Assemble and Haskell). The UI object is called the `AutoCompleteTextView`. Short name, I know. In order to make this work, we have to go replace the `EditText` in our `content_main.xml` file with an `AutoCompleteTextView`.
+Well, fortunately for all of you, Google already did most of that work for you (minus the cats and Assemble and Haskell). The UI object is called the `AutoCompleteTextView`. Short name, I know. In order to make this work, we have to go replace the `EditText` in our `content_main.xml` file with an `AutoCompleteTextView`. After that, we'll have to give that list an adapter, because the list needs to be modified. As a hint, your code should contain something like this:
 
+```java
+ArrayAdapter<String> dropdownAdapter = new ArrayAdapter<>(this, android.R.layout.select_dialog_item, rooms);
+chatroomField.setAdapter(dropdownAdapter);
+```
 
+Okay. Now we're actually done with the `MainActivity.java`. You're almost kinda halfway through this assignment. Exciting, right? Hey, I warned you. Anyway, let's move on to the `ChatActivity.java` file now. Now, we'll need to access our Firebase in this part too. However, in this case, we really don't need to access the while Firebase. I think we'll be good with just accessing the messages in this specific chatroom. So, in the `onCreate()`, let's include this:
 
+```java
+Firebase roomRef = new Firebase("{your Firebase link}/messages/" + chatroom);
+```
 
+We'll also need to stay all hip and cool to all the messages that are passing around. How do we make sure we are always paying attention to the messages? You're right, the thing you don't do in school! Listen! So yeah, if you didn't get that, use a listener. For now, let's pretend that our messages are strings. We'll come back to that later. 
 
+Great, now we always know the messages that are happening. However, as fun as that is, we can't see them (our eyesight is jut really bad). Remember that adapter you initially wrote to display the messages? Yeeaahh, that's no longer gonna work. Now, we have to update that list. Whenever we get a new list, we need to put that new message into our list. To make that all work in a nice and simple way, we're again gonna borrow from Google (they're very generous, aren't they?). The class we're going to use is `BaseAdapter`. The one thing I'm going to let you know about our good ol' friend `BaseAdapter` is that he has this handy-dandy method called `notifyDataSetChanged()`. I'm just going to hope that you can figure out what that means. Just in case you can't, look at these four links:
 
-done.
+http://dictionary.reference.com/browse/notify?s=t
+http://dictionary.reference.com/browse/data?s=t
+http://dictionary.reference.com/browse/set?s=t
+http://dictionary.reference.com/browse/change?s=t
 
-good job, you have made chat app.
+You're about 75% of the way through now! Good job! Now just go back and make sure that you call that method whenever you need the list to update with the info. If you do that correctly, you should now start seeing all of the messages. Cool! But as fun as listening is, I want to talk! So let's get sending messages working. It's not much different from creating a chatroom in the `MainActivity.java`. There is just one thing I want to go over. After you hit the send button, the `EditText` you enter the message in should be cleared. It's another little UI tweak that makes the user not want to attack the developer with a candlestick in the library. 
+
+Almost there! Just hang on a little longer! Now, one of the best (and worst) things about Firebase is how unstructured it is. It's like an book full of blank pages, and you can put whatever you want in, and interpret it and all that wonderful fuzzy stuff. One problem: computer's don't like interpreting unstructured stuff. And when computers don't like things, you get errors. And errors are bad. Bad. So let's learn how to structure the data we send to Firebase. 
+
+The best way to do this is by creating a new class in our code. So let's create a new Java Class and call it `Message.java`. Get it? Got it? Good. You should be figure out how to structure the data from this page: https://www.firebase.com/docs/android/guide/saving-data.html. This time, I'm gonna let you guys figure it out on your own. You need to include the text of the message (String), the sender (String), and the time it was sent (Long). To find out the time in milliseconds, use the command `System.currentTimeMillis()`. Also, if they are in incognito mode, make sure that their sender name is "???" or something else equally mysterious.
+
+If you are reading this, nice job. You figured it out all by yourself (with the help of Firebase's many-person development team). Not bad. Now that you've created your `Message.java` class, go back and replace all the ways use used to use strings for messages. It'll make your code a lot cleaner and nicer and happier. And `happy code == happy programmer`. 
+
+Okay, bear with me for one last second. You're so close to done. The last thing is something that we always need to think about when transferring data across networks. The devices can have all different network speeds, or all sorts of different issues, so we need to make sure that all the messages are all sorted correctly. How about we sort the messages whenever we get a new one (or something a little more efficient and sophisticated, if you feel up to it). Either way, you'll be using the `Comparator` class. See if you can figure it out. 
+
+Nice job! Before we finish with this chat app, let's run through one final checklist, to make sure everything is functioning as it should.
+
+1. The UI is all correct as was described in the homework.
+2. The dropdown feature of the chatroom selection works properly. 
+3. Only valid usernames can be chosen (the length should be longer than "")
+4. Can select incognito mode if desired.
+5. When the user is ready to chat, if the chatroom does not exist, the app creates it. If the chatroom does exist, it does not create a new one.
+6. Sends chat messages with sender, text, and time. Remembers not to send sender if they are incognito.
+7. Displays chat messages upon receival in the proper chronological order, showing both sender and message.
+8. All chat messages show up again when you leave the chatroom and then come back.
+9. You have bought all of the app programmers a proper bribe of candy. (Kidding. Kind of.)
+
+Okay, if that all is done, then nice job. Your app should work across as many devices as you can hook up to the chat system. Nice job! I hereby confer upon you the title of "Novice App Programmer". 
+
+Now, to quote a wise man:
+
+"good job, you have made chat app.
 
 now make scouting system.
 
-kthxbai.
+kthxbai."
+
+See you all this season!
