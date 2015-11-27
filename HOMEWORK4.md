@@ -73,7 +73,7 @@ Almost there! Just hang on a little longer! Now, one of the best (and worst) thi
 
 The best way to do this is by creating a new class in our code. So let's create a new Java Class and call it `Message.java`. Get it? Got it? Good. You should be figure out how to structure the data from this page: https://www.firebase.com/docs/android/guide/saving-data.html. This time, I'm gonna let you guys figure it out on your own. You need to include the text of the message (String), the sender (String), and the time it was sent (Long). To find out the time in milliseconds, use the command `System.currentTimeMillis()`. Also, if they are in incognito mode, make sure that their sender name is "???" or something else equally mysterious.
 
-If you are reading this, nice job. You figured it out all by yourself (with the help of Firebase's many-person development team). Not bad. Now that you've created your `Message.java` class, go back and replace all the ways use used to use strings for messages. It'll make your code a lot cleaner and nicer and happier. And `happy code == happy programmer`. 
+If you are reading this, nice job. You figured it out all by yourself (with the help of Firebase's many-person development team). Not bad. Now that you've created your `Message.java` class, go back and replace all the ways use used to use strings for messages. It'll make your code a lot cleaner and nicer and happier. And `happy code == happy programmer`. In addition, we also should show the sender in grey underneath the message now. We'll do this by using `android.R.layout.simple_list_item_2` now. The documentation for this layout can be found online.
 
 Okay, bear with me for one last second. You're so close to done. The last thing is something that we always need to think about when transferring data across networks. The devices can have all different network speeds, or all sorts of different issues, so we need to make sure that all the messages are all sorted correctly. How about we sort the messages whenever we get a new one (or something a little more efficient and sophisticated, if you feel up to it). Either way, you'll be using the `Comparator` class. See if you can figure it out. 
 
@@ -90,6 +90,9 @@ Nice job! Before we finish with this chat app, let's run through one final check
 9. You have bought all of the app programmers a proper bribe of candy. (Kidding. Kind of.)
 
 Okay, if that all is done, then nice job. Your app should work across as many devices as you can hook up to the chat system. Nice job! I hereby confer upon you the title of "Novice App Programmer". 
+
+![The Knighting of the App Programmer](Images/knighting.jpg)
+
 
 Now, to quote a wise man:
 
