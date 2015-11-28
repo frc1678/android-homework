@@ -62,10 +62,10 @@ We'll also need to stay all hip and cool to all the messages that are passing ar
 
 Great, now we always know the messages that are happening. However, as fun as that is, we can't see them (our eyesight is jut really bad). Remember that adapter you initially wrote to display the messages? Yeeaahh, that's no longer gonna work. Now, we have to update that list. Whenever we get a new list, we need to put that new message into our list. To make that all work in a nice and simple way, we're again gonna borrow from Google (they're very generous, aren't they?). The class we're going to use is `BaseAdapter`. The one thing I'm going to let you know about our good ol' friend `BaseAdapter` is that he has this handy-dandy method called `notifyDataSetChanged()`. I'm just going to hope that you can figure out what that means. Just in case you can't, look at these four links:
 
-http://dictionary.reference.com/browse/notify?s=t
-http://dictionary.reference.com/browse/data?s=t
-http://dictionary.reference.com/browse/set?s=t
-http://dictionary.reference.com/browse/change?s=t
+1. http://dictionary.reference.com/browse/notify?s=t
+2. http://dictionary.reference.com/browse/data?s=t
+3. http://dictionary.reference.com/browse/set?s=t
+4. http://dictionary.reference.com/browse/change?s=t
 
 You're about 75% of the way through now! Good job! Now just go back and make sure that you call that method whenever you need the list to update with the info. If you do that correctly, you should now start seeing all of the messages. Cool! But as fun as listening is, I want to talk! So let's get sending messages working. It's not much different from creating a chatroom in the `MainActivity.java`. There is just one thing I want to go over. After you hit the send button, the `EditText` you enter the message in should be cleared. It's another little UI tweak that makes the user not want to attack the developer with a candlestick in the library. 
 
