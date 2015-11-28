@@ -1,7 +1,5 @@
 #Homework 4
 
-FINISHED, BUT HAS NOT YET UNDERGONE TESTING. UNLESS YOU ARE PREPARED TO GET STUCK, DO NOT YET ATTEMPT.
-
 Welcome back! You are doing very well indeed, and I am pleased to announce that you have made it to the final stage of the process. But that does not mean that you are almost finished. No, this part may prove to be the most difficult. You must navigate APIs, networking, and a myriad of other ideas and concepts to accomplish this chat application. 
 
 First things first, we will be using a service called Firebase. You can get to their website simply by clicking the following link. I also advise you follow the instructions that they provide so that you can integrate Firebase into your application. Your life will be a lot easier if you read through that whole guide before you start on this assignment. You don't need to understand it all immediately, but at least get a sense of it. You'll be referencing it a lot throughout this assignment:
