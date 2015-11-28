@@ -89,7 +89,7 @@ Nice job! Before we finish with this chat app, let's run through one final check
 8. All chat messages show up again when you leave the chatroom and then come back.
 9. You have bought all of the app programmers a proper bribe of candy. (Kidding. Kind of.)
 
-Okay, if that all is done, then nice job. Your app should work across as many devices as you can hook up to the chat system. Nice job! I hereby confer upon you the title of "Novice App Programmer". 
+Okay, if that all is done, then nice job. Your app should work across as many devices as you can hook up to the chat system. I hereby confer upon you the title of "Novice App Programmer". 
 
 ![The Knighting of the App Programmer](Images/knighting.jpg)
 
