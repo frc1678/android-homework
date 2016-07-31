@@ -11,19 +11,31 @@ Assuming you've done all the other assignments, which you should have, *cough* *
 
 This is where Firebase comes in. Firebase is essentially a giant syncing JSON file. By using Firebase, we can structure all of our data in a JSON file and then all of the phones that are using the app can see all of the messages. 
 
-In order to make this work, you need to create a Firebase account. If you go to the link given above, it will ask you to create a new firebase project and initiate a firebase database. To initiate a new Firebase database, click the blue link that says, "Firebase console". That will bring you to the Firebase main page where you will see a blue button that says, "CREATE NEW PROJECT". You will want to click that button and after you click it, it will ask you to name your new project which you can name it Chat App or whatever you desire. Next, you will be brought to another page where you be given the choice to choose which application type you want to develope in and you will choose the one that says Android. Once you have chosen Android, you will be asked to follow three simple tasks to initiate and link your android application directly to the new Firebase Database that you have create.
+In order to make this work, you need to create a Firebase account. Go to Firbase.com and make a firebase account for the new firbase website and not the legacy one. If you go to the link given above, it will ask you to create a new firebase project and initiate a firebase database. To initiate a new Firebase database, click the blue link that says, "Firebase console". That will bring you to the Firebase main page where you will see a blue button that says, "CREATE NEW PROJECT". You will want to click that button and after you click it, it will ask you to name your new project which you can name it Chat App or whatever you desire. Next, you will be brought to another page where you be given the choice to choose which application type you want to develope in and you will choose the one that says, "Add Firebase to your Android App". Once you have chosen Android, you will be asked to follow three simple tasks to initiate and link your android application directly to the new Firebase Database that you have create.
 
 After you have finished creating and intiating a Firebase database for your app, it will ask you to add firebase to your app and all the instructions on how to do that will be given in the link. In order to add Firebase to your android application, you will need to know how to use the Android Manifest file and the Firebase documentation (The link above) will tell you exactly where to put what line of code in your Manifest file in order for Firebase to work in your app. After you have followed all the instructions given in the documentation and added Firebase to your app, you are good to go!
-
-Now that you have successfully made a new Firebase Database
 
 Now, we want our app to connect to Firebase so it sees all of the data. When do we want to see all of that data? You're right! The app should connect immediately so the user does not have to wait for all of the data. Where does immediately happen in the code? Right again! The `onCreate()` of the first activity. Let's go into our `MainActivity.java` file. 
 
 Wow, you took a long time to get into that file. I've been waiting here forever. Take your time, why don't you. We want to connect as immediately as possible, so let's put it as early as possible in the `onCreate()`. How early is as early as possible? Well, it's probably not a good idea to mess with what Android already puts in there for us (hint: it probably puts it in there for a reason). After all of the setup stuff and the floating action button stuff, let's put these two lines of code:
 
+1.) Make a global variable above the onCreate() method to declare Firebase database.
+
 ```java
-Firebase.setAndroidContext(this);
-Firebase roomsRef = new Firebase("insert link here");
+public class MainActivity extends AppCompatActivity {
+    public static FirebaseDatabase dataBase;
+    public static DatabaseReference ref;
+}
+```
+2.) Now specify your database in the onCreate().
+
+```java
+@Override
+    public void onCreate() {
+        super.onCreate();
+        dataBase = FirebaseDatabase.getInstance();
+        ref = dataBase.getReference();
+    }
 ```
 
 Hey! You're connected! Now the way that you access data in Firebase might be a little different than you are used to. It is done via the concept called listeners. If you are interested in learning more, there is a really short and unorganized Wikipedia article: https://en.wikipedia.org/wiki/Observer_pattern. Other than that, well, I'm sure there's some other resource on the internet. I believe in you guys to find it.
@@ -32,7 +44,7 @@ Anyway, so with listeners, we tell our app that we want to look at a certain pie
 
 Before we progress any further, let's think through what we want our app to do. In terms of chatrooms, it needs to stay up to date with all the goings on in the chatroom-osphere. It also needs to create a new chatroom if it is not already there when the user is ready to chat. If it is there, well, then, we need to not make another or else stuff will get confusing. So let's do that!
 
-The first thing that our app will need to listen to is the rooms list, right? We need to always be up to date on how many chatrooms there all and all of that other info. And when do we need to do that? Well, as soon as possible so we don't miss out on anything. If you need any help, I'd recommend you check out this page: https://www.firebase.com/docs/android/guide/retrieving-data.html.
+The first thing that our app will need to listen to is the rooms list, right? We need to always be up to date on how many chatrooms there all and all of that other info. And when do we need to do that? Well, as soon as possible so we don't miss out on anything. If you need any help, I'd recommend you check out this page: https://firebase.google.com/docs/database/android/retrieve-data.html.
 
 Got that done? Great. You're almost there! Wait. No. You're really not. This one is long. But don't give up! You are almost done with this activity.
 
@@ -55,7 +67,7 @@ chatroomField.setAdapter(dropdownAdapter);
 Okay. Now we're actually done with the `MainActivity.java`. You're almost kinda halfway through this assignment. Exciting, right? Hey, I warned you. Anyway, let's move on to the `ChatActivity.java` file now. Now, we'll need to access our Firebase in this part too. However, in this case, we really don't need to access the whole Firebase. I think we'll be good with just accessing the messages in this specific chatroom. In the `onCreate()`, let's include this:
 
 ```java
-Firebase roomRef = new Firebase("{your Firebase link}/messages/" + chatroom);
+DataBaseReference roomRef = dataBase.child("messages").child("chatRoom");
 ```
 
 We'll also need to stay all hip and cool to all the messages that are passing around. How do we make sure we are always paying attention to the messages? You're right, the thing you don't do in school! Listen! So yeah, if you didn't get that, use a listener. For now, let's pretend that our messages are strings. We'll come back to that later. 
