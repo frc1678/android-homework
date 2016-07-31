@@ -11,7 +11,11 @@ Assuming you've done all the other assignments, which you should have, *cough* *
 
 This is where Firebase comes in. Firebase is essentially a giant syncing JSON file. By using Firebase, we can structure all of our data in a JSON file and then all of the phones that are using the app can see all of the messages. 
 
-In order to make this work, you need to create a Firebase account. Please sign up for one at the Firebase website. The account should start with an empty Firebase that can be reached with a link. In order to hook up our app to our Firebase, we need that link. So copy the link. Got it copied? Ok. Good. 
+In order to make this work, you need to create a Firebase account. If you go to the link given above, it will ask you to create a new firebase project and initiate a firebase database. To initiate a new Firebase database, click the blue link that says, "Firebase console". That will bring you to the Firebase main page where you will see a blue button that says, "CREATE NEW PROJECT". You will want to click that button and after you click it, it will ask you to name your new project which you can name it Chat App or whatever you desire. Next, you will be brought to another page where you be given the choice to choose which application type you want to develope in and you will choose the one that says Android. Once you have chosen Android, you will be asked to follow three simple tasks to initiate and link your android application directly to the new Firebase Database that you have create.
+
+After you have finished creating and intiating a Firebase database for your app, it will ask you to add firebase to your app and all the instructions on how to do that will be given in the link. In order to add Firebase to your android application, you will need to know how to use the Android Manifest file and the Firebase documentation (The link above) will tell you exactly where to put what line of code in your Manifest file in order for Firebase to work in your app. After you have followed all the instructions given in the documentation and added Firebase to your app, you are good to go!
+
+Now that you have successfully made a new Firebase Database
 
 Now, we want our app to connect to Firebase so it sees all of the data. When do we want to see all of that data? You're right! The app should connect immediately so the user does not have to wait for all of the data. Where does immediately happen in the code? Right again! The `onCreate()` of the first activity. Let's go into our `MainActivity.java` file. 
 
