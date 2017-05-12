@@ -78,7 +78,7 @@ Great, now we always know the messages that are happening. However, as fun as th
 2. http://dictionary.reference.com/browse/data?s=t
 3. http://dictionary.reference.com/browse/set?s=t
 4. http://dictionary.reference.com/browse/change?s=t
-
+Note: These are just dictionary definitions. Don't be trolled
 You're about 75% of the way through now! Good job! Now just go back and make sure that you call that method whenever you need the list to update with the info. If you do that correctly, you should now start seeing all of the messages. Cool! But as fun as listening is, I want to talk! Let's get sending messages working. It's not much different from creating a chatroom in the `MainActivity.java`. There is just one thing I want to go over. After you hit the send button, the `EditText` you enter the message in should be cleared. It's another little UI tweak that makes the user not want to attack the developer with a candlestick in the library. 
 
 Almost there! Just hang on a little longer! Now, one of the best (and worst) things about Firebase is how unstructured it is. It's like an book full of blank pages, and you can put whatever you want in, and interpret it and all that wonderful fuzzy stuff. One problem: computer's don't like interpreting unstructured stuff. And when computers don't like things, you get errors. Errors are nice, because they try to tell you why your code wont work, and save you from destroying important data, hurting your computer, or picking up the lead pipe (if you are Colonel Mustard).
