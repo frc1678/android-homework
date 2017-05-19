@@ -84,8 +84,23 @@ You're about 75% of the way through now! Good job! Now just go back and make sur
 Almost there! Just hang on a little longer! Now, one of the best (and worst) things about Firebase is how unstructured it is. It's like an book full of blank pages, and you can put whatever you want in, and interpret it and all that wonderful fuzzy stuff. One problem: computer's don't like interpreting unstructured stuff. And when computers don't like things, you get errors. Errors are nice, because they try to tell you why your code wont work, and save you from destroying important data, hurting your computer, or picking up the lead pipe (if you are Colonel Mustard).
 _So_, let's learn how to structure the data we send to Firebase. 
 
-The best way to do this is by creating a new class in our code. Let's create a new Java Class and call it `Message.java`. Get it? Got it? Good. You should be figure out how to structure the data from this page: https://www.firebase.com/docs/android/guide/saving-data.html. This time, I'm gonna let you guys figure it out on your own. You need to include the text of the message (String), the sender (String), and the time it was sent (Long). To find out the time in milliseconds, use the command `System.currentTimeMillis()`. Also, if they are in incognito mode, make sure that their sender name is "???" or something else equally mysterious. (e.g. "thisisnot%s", sender_name)
+The best way to do this is by creating a new class in our code. Let's create a new Java Class and call it `Message.java`. Get it? Got it? Good. You should be figure out how to structure the data from this page: https://www.firebase.com/docs/android/guide/saving-data.html. You need to include the text of the message (String), the sender (String), and the time it was sent (Long). To find out the time in milliseconds, use the command `System.currentTimeMillis()`. Also, if they are in incognito mode, make sure that their sender name is "???" or something else equally mysterious. (e.g. "thisisnot%s", sender_name)
+An example of where to start would be:
+`public class Message {
 
+    private String username;
+    private long sendTime;
+    private String chatMessage;
+    private String messageType = "null";
+    private boolean isComplete = false;  `
+    
+   `In a new method (you should be able to figure this method with firebase) write
+   `this.username = username; `
+   And repeat it for each variable
+   Now we need to fetch our data. An example for the Username is:
+   `public String getUsername() {
+        return username; 
+        `
 If you are reading this, nice job. You figured it out all by yourself (with the help of this assignment, Firebase's many-person development team, Google, etc.). Not bad. Now that you've created your `Message.java` class, go back and replace all the ways use used to use strings for messages. It'll make your code a lot cleaner and nicer and happier. And `happy code == happy programmer`. In addition, we also should show the sender in grey underneath the message now. We'll do this by using `android.R.layout.simple_list_item_2` now. The documentation for this layout can be found online.
 
 Okay, bear with me for one last second. You're so close to done. The last thing is something that we always need to think about when transferring data across networks. The devices can have all different network speeds, or all sorts of different issues, so we need to make sure that all the messages are all sorted correctly. How about we sort the messages whenever we get a new one (or something a little more efficient and sophisticated, if you feel up to it). Either way, you'll be using the `Comparator` class. See if you can figure it out. 
