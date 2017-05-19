@@ -96,7 +96,7 @@ An example of where to start would be:
     
    `In a new method (you should be able to figure this method with firebase) write
    `this.username = username; `
-   And repeat it for each variable
+   And repeat it for each variable.
    Now we need to fetch our data. An example for the Username is:
    `public String getUsername() {
         return username; 
