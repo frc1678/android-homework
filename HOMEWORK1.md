@@ -29,6 +29,8 @@ Now, drumroll please, here is the game!
 You must make an interface that conforms to the following specifications:
 
 1. It must contain two [EditTexts](https://developer.android.com/reference/android/widget/EditText.html).  One EditText will be for the user to enter the name of the chat room that they want to join, and one EditText will be for the user's username.
+An example of an EditText would be 
+
 2. Each EditText must have a [TextView](https://developer.android.com/reference/android/widget/TextView.html) to label what it's for.
 3. Just below that, you'll have a [RelativeLayout](https://developer.android.com/reference/android/widget/RelativeLayout.html).  Inside the RelativeLayout, you'll have a [Switch](https://developer.android.com/reference/android/widget/Switch.html) that will enable Incognito Mode.  In this mode, users won't anounce that they're entering a chat room.  Perfect for spying on your friends!  You'll also have a TextView in the RelativeLayout, to tell the user what the Switch does.
 4. Just below that, place a [Button](https://developer.android.com/reference/android/widget/Button.html) that the user will press to enter the chat room.
